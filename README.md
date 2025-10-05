@@ -90,7 +90,7 @@ pip install -r requirements.txt
 ### 3) Run Locally
 
 ```bash
-streamlit run app.py
+streamlit run simulator.py
 ```
 
 ---
@@ -99,7 +99,7 @@ streamlit run app.py
 
 1. Push code to GitHub (branch `main`).
 2. Go to **share.streamlit.io** → **New app**.
-3. Select repo & branch, set **Main file** = `app.py`.
+3. Select repo & branch, set **Main file** = `simulator.py`.
 4. Deploy.
    (The Cloud reads `requirements.txt` and builds automatically.)
 
@@ -192,7 +192,7 @@ The **Generate PDF** button captures:
 
 ```
 Mindspark_Hackathon/
-├─ app.py                    # Streamlit app (UI + algorithms)
+├─ simulator.py                    # Streamlit app (UI + algorithms)
 ├─ requirements.txt          # streamlit, pandas, numpy, reportlab
 ├─ .streamlit/               # optional config (e.g., theme)
 │  └─ config.toml
@@ -211,7 +211,7 @@ primaryColor="#2e7d32"
 
 ## 🔧 Configuration (tune without editing logic)
 
-Inside `app.py`:
+Inside `simulator.py`:
 
 * **Color distribution**
 
@@ -246,7 +246,7 @@ Inside `app.py`:
 ## 🛠️ Troubleshooting
 
 * **ModuleNotFoundError** → add missing lib to `requirements.txt`, redeploy.
-* **App won’t start in Cloud** → ensure **Main file** is `app.py` and branch is `main`.
+* **App won’t start in Cloud** → ensure **Main file** is `simulator.py` and branch is `main`.
 * **Build too slow or failing** → keep `requirements.txt` **minimal**; avoid OS packages (e.g., `dbus-python`, `python-apt`, CUDA).
 * **Graph empty** → run a few **cycles** first (Start or Full Cycle).
 
@@ -274,5 +274,5 @@ MIT — feel free to use, modify, and build upon this work.
 printf "streamlit\npandas\nnumpy\nreportlab\n" > requirements.txt
 
 # Run
-streamlit run app.py
+streamlit run simulator.py
 ```
